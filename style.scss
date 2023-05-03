@@ -1,0 +1,107 @@
+@use "sass:math";
+*{
+
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  background-color: #c9c9c9;
+}
+
+
+.test{
+  padding: 200px;
+}
+
+.top-service{
+  padding-top: 6rem;
+}
+
+.service{
+  background: linear-gradient(180deg, #3E3E3E 0%, #3E3E3E 80%, #F3F3F3 80%, #F3F3F3 100%);
+}
+
+
+.service__title{
+  text-align: center;
+  font-size: 3.6rem;
+  line-height: math.div( 44, 36);
+  color: white;
+}
+
+
+.service__items {
+  background-color: #fff;
+  margin-top: 6rem;
+  list-style: none;
+  max-width: 96rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.service__item{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: calc( 33.333333% - 6rem );
+}
+
+.service__item:not(:first-child){
+ margin-left: 9rem;
+}
+
+.service__item h4{
+  font-size: 2.8rem;
+  line-height: math.div(28, 20);
+  text-align: center;
+  order: 2;
+  margin-top: 0.8rem;
+}
+
+.service__item p{
+  font-size: 1.4rem;
+  line-height: math.div(24, 14);
+  order: 3;
+  margin-top: 2rem;
+}
+
+
+.service__img{
+
+  //これを指定する場合は疑似要素なし
+  // width: 6.4rem;
+  // height: 6.4rem;
+
+  width: 27.826087%;//230px ÷ 64px
+  position: relative;
+	order: 1;
+}
+
+.service__img::before{
+  content: "";
+  display: block;
+  padding-top:100%;
+}
+
+.service__img img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: initial;
+  object-fit: contain;
+}
+
+
+
